@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nightclubs in Madrid{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}
+        <section class="hero">
+            <h1>Welcome to Nightclubs in Madrid</h1>
+            <p>Discover the best clubs and bars in the heart of Spain.</p>
+            <p>In a city known for the best nightlife in Europe</p>
+        </section>
+        
+        <form action="{% url 'club-list' %}" method="get" class="search-form">
+            <div class="search-box">
+                <input type="text" name="search" placeholder="Search for a club" class="search-input">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+        <form action="{% url 'music-list' %}" method="get" class="search-form">
+            <div class="search-box">
+                <input type="text" name="search" placeholder="Search for a music type" class="search-input">
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+
+        <section class="clubs-listing">
+            {% for club in clubs %}
+                <article class="club">
+                    <h2>{{ club.name }}</h2>
+                    <p>{{ club.location }}</p>
+                    <p>{{ club.music_type }}</p>
+                </article>
+            {% empty %}
+                <p>No clubs found.</p>
+            {% endfor %}
+        </section>
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>© 2023 Nightclubs in Madrid</p>
+    </footer>
+</body>
+</html>
+
+

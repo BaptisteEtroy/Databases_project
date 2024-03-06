@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Style the header */
+header {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e50914;
+    border-radius: 5px;
+}
+
+/* Style the navigation bar */
+.navbar {
+    text-align: left; /* Align the navigation to the left */
+    margin-bottom: 20px; /* Spacing below the navbar */
+}
+
+/* Style for navigation links */
+.nav-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px; /* Spacing between navigation links */
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+    background-color: #ff6b6b;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Add a subtle shadow on hover */
+}
+
+/* Ensure the header has padding to allow for the navigation */
+header {
+    padding: 20px 0; /* Adjust top and bottom padding as needed */
+    position: relative; /* For absolute positioning of nav items if needed */
+}
+
+
+/* Container for the main content */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #1a1a1a; /* Slightly lighter than the body for depth */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for a pop-out effect */
+}
+
+/* Hero section styles */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    color: #f0f0f0;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #aaaaaa; /* Subdued text for the hero paragraph */
+    font-size: 1.2em;
+}
+
+/* Styles for individual club articles */
+.clubs-listing .club {
+    background-color: #222;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.clubs-listing .club:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+/* More specific selector for the search box */
+body .container .search-box {
+    display: flex;
+    justify-content: center;
+    margin: 2em auto; /* Adjust the top and bottom margin as needed */
+    max-width: 90%; /* Make the search box wider */
+    width: 100%; /* Full width */
+}
+
+/* More specific selector for the search input */
+body .container .search-box .search-input {
+    flex: 1; /* Take up available space */
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333; /* Greyish-black background */
+    color: #fff;
+    border: none; /* No border */
+    border-radius: 20px 0 0 20px; /* Rounded corners on the left */
+}
+
+body .container .search-box .search-button {
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right */
+}
