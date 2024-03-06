@@ -3,6 +3,8 @@ Nightclubs in Madrid - Django Project
 ## Introduction
 This project is a Django web application that showcases nightclubs in Madrid. As you join the webapp, it will feature numerous clubs in Madrid with their corresponding information(location, music type). You can search for a club and find its info, or if you want you can search for a music type and find all the clubs featuring that music and their info. If you wish to return to the home page there is also a home button. 
 
+It uses a web scraping program to find the nightclubs and their corresponding info, which proceeds to save the details in an SQL database. The Django backend then connects the databases with a web app, fit with a custom HTML/CSS website.
+
 ## Prerequisites
 To run this project, you will need the following installed on your system:
 1. Python: Version 3.8 or higher.
